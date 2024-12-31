@@ -33,7 +33,7 @@ A key design goal is to maintain sub-500ms response times. On top of that, the s
 ## 3. Architecture Overview
 
 ### **Diagram: Layered Architecture**
-![Layered Architecture]()
+![Layered Architecture](./diagrams/premiersoft_API_diagram_img.png)
 
 ### Components
 1. **API Layer**
@@ -131,14 +131,13 @@ spec:
 ## 7. CI/CD Pipeline
 
 ### Pipeline Diagram
-![CI/CD Pipeline]()
+![CI/CD Pipeline](./diagrams/premiersoft_cicd_diagram_image.png)
 
 ### Steps
-1. **Code Linting:** Ensure style consistency.
-2. **Unit Testing:** Validate core functionalities.
-3. **Docker Build:** Create container image.
-4. **Push to Registry:** Store the image in a container registry.
-5. **Kubernetes Deployment:** Deploy the latest image.
+1. **Unit Testing:** Validate core functionalities.
+2. **Integration Testing:** Validate API and database interactions.
+3. **Docker Build:** Create and publish container image.
+4. **Kubernetes Deployment:** Deploy the latest image.
 
 ## 8. Testing Strategy
 

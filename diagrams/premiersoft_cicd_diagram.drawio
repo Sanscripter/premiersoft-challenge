@@ -1,0 +1,78 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="26.0.2">
+  <diagram name="CI/CD Pipeline" id="0">
+    <mxGraphModel dx="1012" dy="567" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6131uM_wXsvVjpNmCyCw-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sourceCode" target="unitTesting">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sourceCode" value="Source Code (GitHub)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="330" y="50" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="unitTesting" value="Unit Testing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="600" y="50" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6131uM_wXsvVjpNmCyCw-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="integrationTesting" target="6131uM_wXsvVjpNmCyCw-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="integrationTesting" value="Integration Testing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="850" y="50" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6131uM_wXsvVjpNmCyCw-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dockerBuild" target="6131uM_wXsvVjpNmCyCw-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6131uM_wXsvVjpNmCyCw-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dockerBuild" target="kubernetesDeploy">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dockerBuild" value="Docker Build" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e8fb;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="1100" y="50" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="kubernetesDeploy" value="Kubernetes Deployment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="1380" y="50" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="connection1" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;orthogonal=0;strokeColor=#000000;" parent="1" source="sourceCode" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="connection2" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;orthogonal=0;strokeColor=#000000;" parent="1" target="unitTesting" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="connection3" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;orthogonal=0;strokeColor=#000000;" parent="1" source="unitTesting" target="integrationTesting" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="connection4" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;orthogonal=0;strokeColor=#000000;" parent="1" source="integrationTesting" target="dockerBuild" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6131uM_wXsvVjpNmCyCw-2" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="89.28999999999999" as="sourcePoint" />
+            <mxPoint x="330" y="89.28999999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6131uM_wXsvVjpNmCyCw-3" value="Github Actions&lt;br&gt;triggered" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="6131uM_wXsvVjpNmCyCw-2">
+          <mxGeometry x="0.1187" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6131uM_wXsvVjpNmCyCw-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6131uM_wXsvVjpNmCyCw-6" target="6131uM_wXsvVjpNmCyCw-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6131uM_wXsvVjpNmCyCw-6" value="Setup testing DB/env" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="850" y="210" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6131uM_wXsvVjpNmCyCw-8" value="Run tests" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="850" y="370" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6131uM_wXsvVjpNmCyCw-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6131uM_wXsvVjpNmCyCw-10" target="6131uM_wXsvVjpNmCyCw-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6131uM_wXsvVjpNmCyCw-10" value="Build image" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e8fb;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="210" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6131uM_wXsvVjpNmCyCw-12" value="Publish to registry" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e8fb;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="370" width="200" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

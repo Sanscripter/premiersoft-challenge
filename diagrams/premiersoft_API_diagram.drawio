@@ -1,0 +1,69 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="26.0.2">
+  <diagram name="Microservice Architecture" id="0">
+    <mxGraphModel dx="674" dy="1547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="apiLayer" value="API Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="20" y="30" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="serviceLayer" value="Service Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="20" y="160" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="databaseLayer" value="Database Layer (PostgreSQL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="20" y="290" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="connection1" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;orthogonal=0;strokeColor=#000000;" parent="1" source="apiLayer" target="serviceLayer" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="connection2" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;orthogonal=0;strokeColor=#000000;" parent="1" source="serviceLayer" target="databaseLayer" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tYfYnzDqIJ8LhlFnnDY5-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tYfYnzDqIJ8LhlFnnDY5-8" target="tYfYnzDqIJ8LhlFnnDY5-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tYfYnzDqIJ8LhlFnnDY5-8" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="414" y="30" width="346" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tYfYnzDqIJ8LhlFnnDY5-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tYfYnzDqIJ8LhlFnnDY5-9" target="tYfYnzDqIJ8LhlFnnDY5-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tYfYnzDqIJ8LhlFnnDY5-9" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="414" y="160" width="346" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tYfYnzDqIJ8LhlFnnDY5-10" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="414" y="290" width="346" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tYfYnzDqIJ8LhlFnnDY5-11" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="570" y="300" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tYfYnzDqIJ8LhlFnnDY5-12" value="PostgreSQL" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="480" y="315" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tYfYnzDqIJ8LhlFnnDY5-13" value="GET /data" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="625" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tYfYnzDqIJ8LhlFnnDY5-15" value="POST /data" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tYfYnzDqIJ8LhlFnnDY5-18" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="589.44" y="-60" as="sourcePoint" />
+            <mxPoint x="589.44" y="30" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tYfYnzDqIJ8LhlFnnDY5-19" value="Request" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tYfYnzDqIJ8LhlFnnDY5-18">
+          <mxGeometry x="-0.0296" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tYfYnzDqIJ8LhlFnnDY5-20" value="DataService" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tYfYnzDqIJ8LhlFnnDY5-21" value="DataRepository" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="625" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
